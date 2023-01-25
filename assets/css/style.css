@@ -2,9 +2,9 @@
     min-height: 100px;
 }
 
-.ui.grid {
-    padding: 0 !important;
-}
+/* .ui.grid {
+    padding: 0 ;
+} */
 
 /* response form ticketmaster's event lists 
 .ui segment {

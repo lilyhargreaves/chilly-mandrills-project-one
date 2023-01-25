@@ -27,16 +27,20 @@ function grabParams() {
     // var params = document.location.search.split("?");
     //(this is an example URL -> the real URL would be built by another function that grabbed the genre from spotify and a dropdown select for location)
     var params = document.location.search;
-        console.log(params);
+    // console.log("BLABLABLA")
+    //     console.log(params);
 // .pop() returns the last element of an array (which we made by splitting document.location)
     var selectedTerm = params.split('?').pop();
-    console.log(selectedTerm);
+    // console.log(selectedTerm);
 // this recombines the url into something we can make the request with
+// https://app.ticketmaster.com/discovery/v2/events.json?apikey={apikey}
     var searchTerm = "https://app.ticketmaster.com/discovery/v2/events?" + selectedTerm;
 // this ends the function if searchTerm is not truthy
     if (!searchTerm) {
         return;
-    }
+    } 
+    // console.log("ABE")
+    // console.log(searchTerm);
         searchAPI(searchTerm);
 
 }
@@ -98,6 +102,9 @@ function searchAPI(searchTerm) {
             cardImage.alt = resultObj.name;
         var cardContent= document.createElement("div");
             cardContent.className += "content";
+            // var elianeDiv = document.createElement("div");
+            // elianeDiv.className += "description";
+            // elianeDiv.textContent = (resultObj.dates.start.dateTime).split("T")[0];
         var cardHeader = document.createElement("div");
             cardHeader.className += "header";
             cardHeader.textContent = resultObj.name;
@@ -112,6 +119,8 @@ function searchAPI(searchTerm) {
         var spanOne = document.createElement("span");
             spanOne.className += "right floated";
         var eventPrice;
+        // console.log("JHDJKLAD")
+        // console.log(resultObj.priceRanges)
         if (!resultObj.priceRanges) {   
             eventPrice = "No Pricing Available";
         } else if (resultObj.priceRanges[0].min === 0) {
@@ -130,6 +139,7 @@ function searchAPI(searchTerm) {
             cardContent.append(cardHeader);
             metaDiv.append(metaLink);
             cardContent.append(metaDiv);
+            // cardContent.append(elianeDiv);
             cardContent.append(descriptionDiv);
             excontentDiv.append(spanOne);
             excontentDiv.append(spanTwo);
