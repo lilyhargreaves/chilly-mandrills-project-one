@@ -6,6 +6,10 @@
     margin: 0 ;
 }
 
+#navtabs {
+  
+}
+
 /* .hideItem{
     display:none;
     padding:0px;
@@ -57,4 +61,24 @@ span.date {
 span.date::before {
     content: 'Date - ';
     color:crimson;
+}
+
+#showonlyondesktop {
+    display: block;
+  }
+  
+@media screen and (max-width: 680px) {
+  #showonlyondesktop {
+    display: none;
+  }
+}
+
+#visibleonmobileonly {
+    display: none;
+  }
+  
+@media screen and (max-width: 680px) {
+  #visibleonmobileonly {
+    display: block;
+  }
 }

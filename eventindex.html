@@ -1,119 +1,100 @@
 <!DOCTYPE html>
 <html>
-
-<head>
+  <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Fetch Events</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.5.0/dist/semantic.min.css">
-    <link rel="stylesheet" href="./assets/css/style2.css">
-</head>
-
-<!----------------------------------------------------------------------------------->
-<body>
+    <link rel="stylesheet" href="./assets/css/style.css">
+  </head>
+  <!----------------------------------------------------------------------------------->
+  <body>
     <!-- Main Page-->
     <main>
-    <h1><i class="headphones icon"></i> Fetch Event</h1>
-    <div class="ui pointing menu inverted blue">
-        <a class="active item">
-            Home
-        </a>
-        <a class="item">
-            Popular Events
-        </a>
-        <a class="item">
-            FAQ
-        </a>
-        <div class="right menu">
-            <input type="text" placeholder="Favourite Artist" id="artist_input" />
-            
-        <select class="ui search dropdown">
-            <option value="">Select Location</option>
-            <option value="ACT" market-id="302">Australian Capital Territory</option>
-            <option value="NSW" market-id="302">New South Wales</option>
-            <option value="TAS" market-id="305">Tasmania</option>
-            <option value="WA" market-id="304">Western Australia</option>
-            <option value="VIC" market-id="305">Victoria</option>
-        </select>
-        <button class="ui blue button" type="submit" id="search-button">Search</button>
-            <!-- <div class="item">
-                <div class="ui transparent icon input">
-                    <input type="text" placeholder="Your Favourite Artist">
-                    <i class="search link icon"></i> -->
-                  </div> 
+      <h1>
+        <i class="headphones icon"></i> Fetch Event
+      </h1>
+      <div class="ui pointing menu inverted blue" id="navtabs">
+        <a class="active item" id="navhome"> Home </a>
+        <a class="item" id="navpopularevents"> Popular Events </a>
+        <a class="item" id="navfaq"> FAQ </a>
+        <div class="right menu"></div>
+        <a href="./signup.html" class="item"> Sign Up </a>
+        <a href="./login.html" class="item"> Login </a>
+        <div class="item" id="showonlyondesktop">
+            <div class="ui transparent icon input">
+                <input type="text" placeholder="Your Favourite Artist">
+                <i class="search link icon"></i>
             </div>
         </div>
-    </div>
-    </div> 
-</main>
-
-<!--------------------------------------------------------------------------------->
-<!--How do i hide this on the desktop version???-->
-    <!-- <div class="ui input search-input">
-        <input type="text" placeholder="Location" id="location_input" /> DONT WANT THIS
-        <input type="text" placeholder="Favourite Artist" id="artist_input" />
-    </div>
-    <div class="ui input search-input">
-        <input type="text" placeholder="Location" id="location_input" />
-        <select class="ui search dropdown">
-            <option value="">Select Location</option>
+      </div>
+      <!--------------------------------------------------------------------------------->
+      <!--I really want this on my page but i don know where to put it-->
+      <!-- <div class="right menu">
+             -->
+      <!--------------------------------------------------------------------------------->
+      <div class="ui grid" id="visibleonmobileonly">
+        <div class="six wide column">
+            <div class="ui input">
+                <input type="text" placeholder="Artist" id="artist_input" >
+              </div>
+        </div>
+        <div class="six wide column">
+          <select class="ui dropdown">
+            <option value="">Location</option>
             <option value="ACT" market-id="302">Australian Capital Territory</option>
             <option value="NSW" market-id="302">New South Wales</option>
             <option value="TAS" market-id="305">Tasmania</option>
             <option value="WA" market-id="304">Western Australia</option>
             <option value="VIC" market-id="305">Victoria</option>
-        </select>
-        <button class="ui blue button" type="submit" id="search-button">Search</button>
-    </div> -->
-<!----------------------------------------------------------------------------------->
-
-
-
-    <div class="ui segment">
-        <p>Donec blandit aliquet rutrum. Donec et pharetra nulla. Nullam ultrices nisi vitae luctus volutpat. Nunc
-            vitae magna ultricies, vulputate erat vitae, lacinia ipsum. Ut eu nisl at magna vulputate sagittis.
-            Etiam eros orci, dictum sed risus in, iaculis eleifend diam. Ut dapibus nulla sit amet mauris tristique
-            viverra. Mauris varius sed ligula a accumsan. Praesent feugiat euismod velit, eu vestibulum libero
-            scelerisque sed. Aliquam finibus turpis arcu, nec convallis dui semper id. Ut nisl lacus, molestie ac
-            ornare sit amet, suscipit mollis sapien.</p>
-
+          </select>
+        </div>
+        <div class="one wide column">
+            <button class="ui primary button">
+                🔎
+            </button>
+        </div>
+      </div>
+      <!--Default search html from semantic ui-->
+    </main>
+    <!--------------------------------------------------------------------------------->
+    <!--How do i hide this on the desktop version???-->
+    <!-- <div class="ui input search-input"><input type="text" placeholder="Location" id="location_input" /> DONT WANT THIS
+        <input type="text" placeholder="Favourite Artist" id="artist_input" /></div><div class="ui input search-input"><input type="text" placeholder="Location" id="location_input" /><select class="ui search dropdown"><option value="">Select Location</option><option value="ACT" market-id="302">Australian Capital Territory</option><option value="NSW" market-id="302">New South Wales</option><option value="TAS" market-id="305">Tasmania</option><option value="WA" market-id="304">Western Australia</option><option value="VIC" market-id="305">Victoria</option></select><button class="ui blue button" type="submit" id="search-button">Search</button></div> -->
+    <!----------------------------------------------------------------------------------->
+    <div class="ui segment" id="home" style="display:none">
+      <p>Donec blandit aliquet rutrum. Donec et pharetra nulla. Nullam ultrices nisi vitae luctus volutpat. Nunc vitae magna ultricies, vulputate erat vitae, lacinia ipsum. Ut eu nisl at magna vulputate sagittis. Etiam eros orci, dictum sed risus in, iaculis eleifend diam. Ut dapibus nulla sit amet mauris tristique viverra. Mauris varius sed ligula a accumsan. Praesent feugiat euismod velit, eu vestibulum libero scelerisque sed. Aliquam finibus turpis arcu, nec convallis dui semper id. Ut nisl lacus, molestie ac ornare sit amet, suscipit mollis sapien.</p>
+    </div>
+    <div class="ui segment" id="popularevents" style="display:none">
+      <p>Donec blandit aliquet rutrum. Donec et pharetra nulla. Nullam ultrices nisi vitae luctus volutpat. Nunc vitae magna ultricies, vulputate erat vitae, lacinia ipsum. Ut eu nisl at magna vulputate sagittis. Etiam eros orci, dictum sed risus in, iaculis eleifend diam. Ut dapibus nulla sit amet mauris tristique viverra. Mauris varius sed ligula a accumsan. Praesent feugiat euismod velit, eu vestibulum libero scelerisque sed. Aliquam finibus turpis arcu, nec convallis dui semper id. Ut nisl lacus, molestie ac ornare sit amet, suscipit mollis sapien.</p>
+    </div>
+    <div class="ui segment" id="faq" style="display:none">
+      <p>Donec blandit aliquet rutrum. Donec et pharetra nulla. Nullam ultrices nisi vitae luctus volutpat. Nunc vitae magna ultricies, vulputate erat vitae, lacinia ipsum. Ut eu nisl at magna vulputate sagittis. Etiam eros orci, dictum sed risus in, iaculis eleifend diam. Ut dapibus nulla sit amet mauris tristique viverra. Mauris varius sed ligula a accumsan. Praesent feugiat euismod velit, eu vestibulum libero scelerisque sed. Aliquam finibus turpis arcu, nec convallis dui semper id. Ut nisl lacus, molestie ac ornare sit amet, suscipit mollis sapien.</p>
     </div>
     <img src="./assets/images/hero.jpg" style="width: 100%">
-    </div>
-
     <!------------------------------------for js inputs----------------------------------------------->
     <div class="pusher">
-
-        <div class="ui equal width grid">
-            <!-- <div class="hideItem four wide column"></div> -->
-            <div class="column">
-                <div id="content" class="ui segment">
-                    <!-- card box populated by api with card element per event -->
-                    <div class="ui link cards" id="card-box">
-                    </div>
-                </div>
-            </div>
+      <div class="ui equal width grid">
+        <!-- <div class="hideItem four wide column"></div> -->
+        <div class="column">
+          <div id="content" class="ui segment">
+            <!-- card box populated by api with card element per event -->
+            <div class="ui link cards" id="card-box"></div>
+          </div>
         </div>
+      </div>
     </div>
-    </div>
-
-
-
-
     <!-------------------------------FOOTER-------------------------------------------------->
     <div class="ui vertical footer segment inverted blue">
-        <div class="ui container center aligned">
-            <p>Created by Lily Hargreaves, Timothy Van Mook-Letcher, Michael Monaghan and Elaine Lim</p>
-        </div>
+      <div class="ui container center aligned">
+        <p>Created by Lily Hargreaves, Timothy Van Mook-Letcher, Michael Monaghan and Elaine Lim</p>
+      </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/semantic-ui/2.2.6/semantic.min.js"></script>
-
     <script src="./assets/js/event-index-api-functions.js"></script>
     <script src="./assets/js/eventscript.js" async defer></script>
-</body>
-
+  </body>
 </html>
