@@ -47,13 +47,21 @@
                 </div>
             </div>
         </div>
-        <img src="https://images.pexels.com/photos/1190298/pexels-photo-1190298.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1260&amp;h=750&amp;dpr=1" style="width: 100%">
+        <img src="./assets/images/hero.jpg" style="width: 100%">
         <div class="flex-wrapper">
             <div class="ui input search-input">
                 <input type="text" placeholder="Favourite Artist" id="artist_input" />
             </div>
             <div class="ui input search-input">
-                <input type="text" placeholder="Location" id="location_input" />
+                <!-- <input type="text" placeholder="Location" id="location_input" /> -->
+                <select class="ui search dropdown">
+                    <option value="">Select Location</option>
+                    <option value="ACT" market-id="302">Australian Capital Territory</option>
+                    <option value="NSW" market-id="302">New South Wales</option>
+                    <option value="TAS" market-id="305">Tasmania</option>
+                    <option value="WA" market-id="304">Western Australia</option>
+                    <option value="VIC" market-id="305">Victoria</option>
+                </select>
             </div>
             <div class="btn-flex-wrapper">
             <button class="ui primary button search-button" id= "search-button">
