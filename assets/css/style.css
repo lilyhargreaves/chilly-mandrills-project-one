@@ -1,10 +1,26 @@
-#content {
+/* #content {
     min-height: 100px;
-}
+} */
 
 /* .ui.grid {
-    padding: 0 ;
+    padding: 0;
+    
 } */
+.container {
+
+}
+
+.ui menu {
+    height: auto;
+}
+
+nav ul{
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline-block;
+}
 
 /* response form ticketmaster's event lists 
 .ui segment {
@@ -13,46 +29,40 @@
     overflow-y: scroll;
 } */
 
+
 .pushable.segment {
-    margin: 0 !important;
+    margin: 0 ;
 }
 
 
-.web-logo{
-    font-size: 2em !important;
-    line-height: 1.5em !important;
-    margin-left:10px !important;
-}
 
-.mobile-page-title{
+/* .mobile-page-title{
     text-align: center;
     width:100%;
     margin-left: -53.52px;
     margin-top: auto;
-    margin-bottom:auto !important;
-}
+    margin-bottom:auto;
+} */
 
-.desktop-page-title{
+/* .desktop-page-title{
     text-align: center;
     margin-top: auto;
-    margin-bottom:auto !important;
-    margin-left:8px;
-}
+    margin-bottom:auto;
+    margin-left:2px;
+} */
 
 .hideItem{
     display:none;
     padding:0px;
     margin:0px;
-    width:0% !important;
+    width:0%;
 }
 
 .flex-wrapper{
     width:100%;
     display: flex;
-    /* position: -webkit-sticky;
-    position: sticky;
-    top:0; */
-    margin-bottom:20px;
+    margin-top:30px;
+    justify-content: center
 }
 
 .search-input{
@@ -61,10 +71,10 @@
     margin-left:5px; 
     justify-content: flex-start;
 }
-.search-button{
-    margin-top:5px !important;
-    margin-bottom:10px !important;
-    margin-left: 5px !important;
+#search-button{
+    margin-top:5px;
+    margin-bottom:10px;
+    margin-left: 10px;
 }
 
 .ui.segment {
@@ -89,11 +99,11 @@
         width:100%;
         display: flex;
     }
-    .search-button{
+    /* .search-button{
         width: 80%;
         margin-left:auto !important;
         margin-right:auto !important;
-    }
+    } */
 }
 /* Date of events, sits below Name of Event. */
 span.date {

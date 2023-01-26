@@ -27,17 +27,30 @@
         <div class="computer only row">
             <div class="column">
                 <div class="ui menu">
-                    <h1><i class="headphones icon"></i> Fetch Event</h1>
-                    <div class="right menu">
-                    <a class="item">Menu Item A</a>
-                    <a class="item">Menu Item B</a>
-                    <a class="item">Menu Item C</a>
-                    <a class="item">Menu Item D</a>
-                    </div>
+                    <h1><i class="headphones icon"></i> Fetch Event</h1>  
+                <nav>
+                <div class="container">
+                <ul>
+                    <li><a href="#who-are-we" class="item">Who are we</a>
+                    <li><a href="#upcoming-events" class="item">Upcoming Events</a>
+                    <li><a href="#popular-events" class="item">Popular Events</a>
+                    <li><a href="#faq" class="item">FAQ</a>
+
+
+                    <!-- <a class="item">Upcoming Events</a>
+                    <a class="item">Popular Events</a>
+                    <a class="item">FAQ</a> -->
+                </ul>
+                </div>
+                </nav>
+                
                 </div>
             </div>
         </div>
-        
+    
+
+
+
         <div class="tablet mobile only row">
             <div class="column">
                 <div class="ui menu">
@@ -48,37 +61,81 @@
             </div>
         </div>
         <img src="./assets/images/hero.jpg" style="width: 100%">
-        <div class="flex-wrapper">
-            <div class="ui input search-input">
-                <input type="text" placeholder="Favourite Artist" id="artist_input" />
-            </div>
-            <div class="ui input search-input">
-                <!-- <input type="text" placeholder="Location" id="location_input" /> -->
-                <select class="ui search dropdown">
-                    <option value="">Select Location</option>
-                    <option value="ACT" market-id="302">Australian Capital Territory</option>
-                    <option value="NSW" market-id="302">New South Wales</option>
-                    <option value="TAS" market-id="305">Tasmania</option>
-                    <option value="WA" market-id="304">Western Australia</option>
-                    <option value="VIC" market-id="305">Victoria</option>
-                </select>
-            </div>
-            <div class="btn-flex-wrapper">
-            <button class="ui primary button search-button" id= "search-button">
-                Search
-            </button>
-            </div>
+        
+    </div>
+
+    <section class="nav-tabs">
+        <article id="who-are-we" class="nav-tab">
+            <h2>Who are we</h2>
+            <p>Donec blandit aliquet rutrum. Donec et pharetra nulla. Nullam ultrices nisi vitae luctus volutpat. Nunc
+                vitae magna ultricies, vulputate erat vitae, lacinia ipsum. Ut eu nisl at magna vulputate sagittis.
+                Etiam eros orci, dictum sed risus in, iaculis eleifend diam. Ut dapibus nulla sit amet mauris tristique
+                viverra. Mauris varius sed ligula a accumsan. Praesent feugiat euismod velit, eu vestibulum libero
+                scelerisque sed. Aliquam finibus turpis arcu, nec convallis dui semper id. Ut nisl lacus, molestie ac
+                ornare sit amet, suscipit mollis sapien.</p>
+        </article>
+
+        <article id="upcoming-events" class="nav-tab">
+            <h2>Upcoming Events</h2>
+            <p>Donec blandit aliquet rutrum. Donec et pharetra nulla. Nullam ultrices nisi vitae luctus volutpat. Nunc
+                vitae magna ultricies, vulputate erat vitae, lacinia ipsum. Ut eu nisl at magna vulputate sagittis.
+                Etiam eros orci, dictum sed risus in, iaculis eleifend diam. Ut dapibus nulla sit amet mauris tristique
+                viverra. Mauris varius sed ligula a accumsan. Praesent feugiat euismod velit, eu vestibulum libero
+                scelerisque sed. Aliquam finibus turpis arcu, nec convallis dui semper id. Ut nisl lacus, molestie ac
+                ornare sit amet, suscipit mollis sapien.</p>
+        </article>
+
+        <article id="popular-events" class="nav-tab">
+            <h2>Popular Events</h2>
+            <p>Donec blandit aliquet rutrum. Donec et pharetra nulla. Nullam ultrices nisi vitae luctus volutpat. Nunc
+                vitae magna ultricies, vulputate erat vitae, lacinia ipsum. Ut eu nisl at magna vulputate sagittis.
+                Etiam eros orci, dictum sed risus in, iaculis eleifend diam. Ut dapibus nulla sit amet mauris tristique
+                viverra. Mauris varius sed ligula a accumsan. Praesent feugiat euismod velit, eu vestibulum libero
+                scelerisque sed. Aliquam finibus turpis arcu, nec convallis dui semper id. Ut nisl lacus, molestie ac
+                ornare sit amet, suscipit mollis sapien.</p>
+        </article>
+
+        <article id="faq" class="nav-tab">
+            <h2>FAQ</h2>
+            <p>Donec blandit aliquet rutrum. Donec et pharetra nulla. Nullam ultrices nisi vitae luctus volutpat. Nunc
+                vitae magna ultricies, vulputate erat vitae, lacinia ipsum. Ut eu nisl at magna vulputate sagittis.
+                Etiam eros orci, dictum sed risus in, iaculis eleifend diam. Ut dapibus nulla sit amet mauris tristique
+                viverra. Mauris varius sed ligula a accumsan. Praesent feugiat euismod velit, eu vestibulum libero
+                scelerisque sed. Aliquam finibus turpis arcu, nec convallis dui semper id. Ut nisl lacus, molestie ac
+                ornare sit amet, suscipit mollis sapien.</p>
+        </article>
+    </section>
+    
+    <div class="flex-wrapper">
+        <div class="ui input search-input">
+            <input type="text" placeholder="Favourite Artist" id="artist_input" />
+        </div>
+        <div class="ui input search-input">
+            <!-- <input type="text" placeholder="Location" id="location_input" /> -->
+            <select class="ui search dropdown">
+                <option value="">Select Location</option>
+                <option value="ACT" market-id="302">Australian Capital Territory</option>
+                <option value="NSW" market-id="302">New South Wales</option>
+                <option value="TAS" market-id="305">Tasmania</option>
+                <option value="WA" market-id="304">Western Australia</option>
+                <option value="VIC" market-id="305">Victoria</option>
+            </select>
+        </div>
+        <div class="btn-flex-wrapper">
+        <!-- <button class="ui primary button search-button" id= "search-button"> -->
+            <button class="ui blue button" type="submit" id="search-button">Search</button>
+        </button>
         </div>
     </div>
-    <br>
-    <br>
+
+
     <!-- mobile mode when click hamburger, ui side bar will appear -->
     <div class="ui pushable segment">
         <div class="ui sidebar vertical menu">
-            <a class="item">Menu Item A</a>
-            <a class="item">Menu Item B</a>
-            <a class="item">Menu Item C</a>
-            <a class="item">Menu Item D</a>
+            <a class="item">Who are we</a>
+            <a class="item">Upcoming Events</a>
+            <a class="item">Popular Events</a>
+            <a class="item">FAQ</a>
         </div>
         <div class="pusher">
             
@@ -92,6 +149,11 @@
                     </div>
                 </div>                
             </div>
+        </div>
+    </div>
+    <div class="ui vertical footer segment inverted blue">
+        <div class="ui container center aligned">
+            <p>Created by Lily Hargreaves, Timothy Van Mook-Letcher, Michael Monaghan and Elaine Lim</p>
         </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
