@@ -1,21 +1,10 @@
-.nav-tabs {
-    margin-top: 10%;
+.hero-img {
+    margin-top: 20px;
 }
 
 .pushable.segment {
     margin: 0 ;
 }
-
-#navtabs {
-  
-}
-
-/* .hideItem{
-    display:none;
-    padding:0px;
-    margin:0px;
-    width:0%;
-} */
 
 .search-input{
     margin-top:5px;
@@ -43,15 +32,6 @@
 .footer.segment {
     min-height: 125px;
 }
-
-/* @media only screen and (max-width: 400px){
-    .flex-wrapper{
-        display: block;
-    }
-    .btn-flex-wrapper{
-        width:100%;
-        display: flex;
-    } */
     
 /* Date of events, sits below Name of Event. */
 span.date {
